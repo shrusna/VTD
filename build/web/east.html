@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ville de Tours</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+            font-family: Century Gothic;
+		}
+
+		.main{
+			width: 100%;
+			height: 130vh;
+			background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(img/bgutama.jpg);
+			background-size: cover;
+		}
+
+		nav{
+			width: 100%;
+			height: 50px;
+			line-height: 40px;
+			z-index: 999;
+		}
+
+        nav img{
+            margin-top: -15px;
+        }		
+
+		nav ul{
+			float: right;
+			margin-right: 95px;
+		}
+
+		nav ul li{
+			list-style-type: none;
+			display: inline-block;
+			transition: 0.5s all;
+		}
+
+		nav ul li:hover{
+			background-color: #000;	
+		}
+
+		nav ul li.active{
+			background-color: #000;
+	        color: #fff;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: #fff;
+			padding: 30px;
+			font-weight: bold;
+		}
+
+		img{
+			margin-top: 13px;
+            padding-left: 40px;
+		}
+
+        footer {
+            position: fixed;
+            padding-top: -5px;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+       }
+
+.title1{
+	position: absolute;
+	top: 35%;
+	left: 8%;
+}
+
+.title1 h3{
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+}
+
+.title{
+	position: absolute;
+	top: 42%;
+	left: 8%;
+}
+
+.title h1{
+	border: 5px solid #fff;
+	color: #fff;
+	font-size: 50px;
+}
+
+.button{
+	position: absolute;
+	top: 56%;
+	left: 8%;
+}
+
+.btn{
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.btn:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+.followus
+{
+    font-size: 16px;
+    color: white;
+    width: 100px;
+}
+.tulisan
+{
+    font-size: 12px;
+}
+.contactus
+{
+    font-size: 15px;
+    color: white;
+    width: 150px;
+}
+.drop1 ul 
+{
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    list-style-type:none;
+    z-index: 999;
+}
+.drop1 li:hover { position:relative; background:black; }
+.drop1 li:hover ul 
+{
+    left:0px;
+    top:38px;
+    background:black;
+    padding:0px;
+}
+
+.drop1 li:hover ul li a 
+{
+    padding:5px;
+    display:block;
+    width:200px;
+    text-indent:5px;
+    background-color:black;
+}
+.drop1 li:hover ul li a:hover { background:red; }
+
+.product1{
+	width: 300px;
+	height: 200px;
+	margin-top: 50px;
+	margin-left: 40px;
+	display: inline-block;
+	float: left;
+}
+
+.productimg{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    border: 2px solid #fff;
+    position: relative;
+}
+
+.productimg img{
+	width: 300px;
+	height: 200px;
+	margin-left: -40px;
+	margin-top: 0px;
+}
+
+.quickview1{
+	width: 300px;
+	padding: 10px 0;
+	text-align: center;
+    background-color: #000;
+    position: absolute;
+	top: 0;
+	left: 0;
+	font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.productimg:hover .quickview1{
+    top: 0;
+}
+
+.producttitle{
+	width: 300px;
+	height: auto;
+	padding: 10px 0;
+}
+
+.producttitle h3{
+	margin: 0;
+	text-align: center;
+	font-weight: normal;
+	background-color: #000;
+    color: #fff;
+}
+
+.product-view{
+	position: absolute;
+	display: none;
+	width: 800px;
+	height: 400px;
+    padding: 10px;
+    border: 2px solid #fff;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #fff;
+    z-index: 999;
+}
+
+.close-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 10px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.zoom{
+	width: 250px;
+	display: inline-block;
+	float: left;
+	margin-left: -20px;
+	margin-top: 5px;
+}
+
+.zoom img{ 
+	width: 250px;
+
+}
+
+.desc{
+	margin-right: 20px;
+	margin-top: 10px;
+	float: right;
+}
+
+.order{
+	font-weight: bold;
+}
+
+.overlay1 {
+  position: absolute; 
+  bottom: 5px; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 301px;
+  height: 20px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  margin-left: 0px;
+  margin-bottom: -3px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+  left: 0%;
+}
+
+.productimg:hover .overlay1 {
+  opacity: 1;
+} 
+
+.posisi{
+    margin-left: 10%;
+}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<img src="img/tours.png" width="150" height="110">
+			<ul class="drop1">
+				<li><a href="home.html">Home</a></li>
+				<li class="active"><a href="destination.html">Destinations</a>
+					<ul>
+					    <li><a href='west.html'>Western Indonesia</a></li><br>
+					    <li><a href='central.html'>Central Indonesia</a></li><br>
+					    <li><a href='east.html'>Eastern Indonesia</a></li><br>
+				   </ul> 
+				</li>
+				<li><a href="galeri.html">Gallery</a>
+					<ul>
+					    <li><a href='mountain.html'>Mountain</a></li><br>
+					    <li><a href='beach.html'>Beach</a></li><br>
+					    <li><a href='park.html'>Park</a></li><br>
+					    <li><a href='sea.html'>Sea</a></li><br>
+				   </ul>
+				</li>
+				<li><a href="reservform.jsp">Reservation</a></li>
+				<li><a href="kontak.jsp">Contact</a></li>
+                <li><a href="#"><img src="img/000.png" width="15" height="15"></a>
+                    <ul>
+                        <li><a href='Logout'>Logout</a></li><br>
+                   </ul>
+                </li>				
+			</ul>
+		</nav>
+<div class="posisi">
+	<div class="product1">
+		<div class="productimg">
+			<img src="wes/ora.jpg">
+			<div class="overlay1">Pantai Ora</div>
+			<div class="quickview1">View</div>
+		</div>
+
+	</div>
+	<div class="product-view">
+	    <div class="close-btn">X</div>
+	    <div class="zoom">
+	    	<img src="wes/ora.jpg">
+	    </div>
+	    <div class="desc">
+	    	<h3>Pantai Ora</h3><br>
+	    	<h5>This beach has a view that is so exotic.<br> The clearness of sea water and white sand against<br> the backdrop of a sturdy and majestic limestone cane,<br> and the location of a beach covered with lush tropical trees<br> will make the honeymoon atmosphere even more romantic.</h5><br>
+	    	<h5>Location : Jl. Kabupaten, Seram Utara, Kabupaten Maluku Tengah,<br> Maluku, Indonesia</h5>
+	    	<h5>Oprasional Day : Every Day: 07.00 – 18.00 WIT</h5><br>
+            <div class="travel">
+                <h5>Airplane : Rp.2.675.000</h5>
+				<h5>accommodation : Rp.1.192.500</h5>
+				<h5>Entrance Ticket : Rp.5.000.000</h5>
+				<h5>--------------------</h5>
+				<h5>TOTAL : Rp.8.867.500</h5>
+	    	</div>
+	    	<a href="about.html"><button class="order">Click to Order</button></a>	
+	    </div>
+	</div>
+
+	<div class="product1">
+		<div class="productimg">
+			<img src="wes/halma.jpg">
+			<div class="overlay1">Halmahera</div>
+			<div class="quickview1">View</div>
+		</div>
+
+	</div>
+	<div class="product-view">
+	    <div class="close-btn">X</div>
+	    <div class="zoom">
+	    	<img src="wes/halma.jpg">
+	    </div>
+	    <div class="desc">
+	    	<h3>Halmahera</h3><br>
+	    	<h5>In addition to the Bunaken Marine Park,<br> there is one beautiful spot to see the beauty of marine<br> life and coral reefs in Indonesia,<br> namely in the Halmahera Islands. Its natural beauty which is<br> still maintained until now makes<br> Halmahera the best diving location ever.</h5><br>
+	    	<h5>Location : Maluku Utara</h5>
+	    	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+	    	<div class="travel">
+                <h5>Airplane : Rp.6.198.400</h5>
+				<h5>accommodation : Rp.2.100.000</h5>
+				<h5>Entrance Ticket : Rp.400.000</h5>
+	        	<h5>--------------------</h5>
+				<h5>TOTAL : Rp.8.867.500</h5>
+	    	</div>
+	    	<a href="about.html"><button class="order">Click to Order</button></a>	
+	    </div>
+	</div>
+
+	<div class="product1">
+		<div class="productimg">
+			<img src="img/rajaampat.jpg">
+			<div class="overlay1">Raja Ampat</div>
+			<div class="quickview1">View</div>
+		</div>
+
+	</div>
+	<div class="product-view">
+	    <div class="close-btn">X</div>
+	    <div class="zoom">
+	    	<img src="img/rajaampat.jpg">
+	    </div>
+	    <div class="desc">
+	    	<h3>Raja Ampat</h3><br>
+	    	<h5>Raja Ampat Islands in West Papua save extraordinary<br> tourism potential. That said, this tourist attraction<br> is the best underwater diving location in the</h5><br>
+	    	<h5>Location : Papua Barat</h5>
+	    	<h5>Oprasional Day : Every Day: 07.00 – 18.00 WIT</h5><br>
+	    	<div class="travel">
+                <h5>Airplane : Rp.3.610.000</h5>
+				<h5>accommodation : Rp.5.647.907</h5>
+				<h5>Entrance Ticket : Rp.1.000.0000</h5>
+				<h5>--------------------</h5>
+	        	<h5>TOTAL : Rp.10.257.907</h5>
+	    	</div><br>
+	    	<a href="about.html"><button class="order">Click to Order</button></a>	
+	    </div>
+	</div>
+
+	<div class="product1">
+		<div class="productimg">
+			<img src="wes/sentani.jpg">
+			<div class="overlay1">Danau Sentai</div>
+			<div class="quickview1">View</div>
+		</div>
+
+	</div>
+	<div class="product-view">
+	    <div class="close-btn">X</div>
+	    <div class="zoom">
+	    	<img src="wes/sentani.jpg">
+	    </div>
+	    <div class="desc">
+	    	<h3>Danau Sentani</h3><br>
+	    	<h5>Besides Raja Ampat, Papua also has another<br> natural charm that is no less beautiful,<br> namely Lake Sentani. One thing that is so interesting is the<br> presence of 22 islands around the lake.</h5><br>
+	    	<h5>Location : Perbatasan antara Kota Jayapura dan<br> Kabupaten Jayapura, Papua</h5>
+	    	<h5>Oprasional Day : Every Day:24 Hours</h5>
+	    	<div class="travel">
+                <h5>Airplane : Rp.3.610.000</h5>
+				<h5>accommodation : Rp.450.000</h5>
+				<h5>Entrance Ticket : Rp.20.000</h5>
+				<h5>--------------------</h5>
+				<h5>TOTAL : Rp.4.080.000</h5>
+	    	</div>
+	    	<a href="about.html"><button class="order">Click to Order</button></a>	
+	    </div>
+	</div>
+</div>
+	
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.quickview1').click(function(){
+			var $productview = $(this).parent().parent().next();
+			$($productview).fadeIn('1000');
+		});
+		$('.close-btn').click(function(){
+			var $closebtn = $(this).parent();
+			$($closebtn).fadeOut('800');
+		});
+	});	
+</script>
+
+<footer>
+    <table>
+        <tr>
+            <td class="followus" >Follow Us :</td>
+            <td ><img src="img/ig.png" width="35" height="35"></td>
+            <td class="tulisan" >@VillaDeToure</td>
+            <td><img src="img/twitter.png" width="35" height="35"><td>
+            <td class="tulisan" >@VillaDeToure</td>
+            <td width="400"></td>
+            <td class="contactus" >Contact Us :</td>
+            <td class="tulisan" >villadetour@vdt.com</td>
+        </tr>
+    </table>
+</footer>    	
+</body>
+</html>

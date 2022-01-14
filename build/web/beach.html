@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ville de Tours</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+            font-family: Century Gothic;
+		}
+
+		.main{
+			width: 100%;
+			height: 120vh;
+			background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(img/bgpantai.jpg);
+			background-size: cover;
+		}
+
+		nav{
+			width: 100%;
+			height: 50px;
+			line-height: 40px;
+			z-index: 999;w
+		}
+
+		nav img{
+            margin-top: -15px;
+        }
+
+		nav ul{
+			float: right;
+			margin-right: 95px;
+		}
+
+		nav ul li{
+			list-style-type: none;
+			display: inline-block;
+			transition: 0.5s all;
+		}
+
+		nav ul li:hover{
+			background-color: #000;	
+		}
+
+		nav ul li.active{
+			background-color: #000;
+	        color: #fff;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: #fff;
+			padding: 30px;
+			font-weight: bold;
+		}
+
+		img{
+			margin-top: 13px;
+            padding-left: 40px;
+		}
+
+		footer {
+            position: fixed;
+            padding-top: -5px;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+       }
+
+.title1{
+	position: absolute;
+	top: 35%;
+	left: 8%;
+}
+
+.title1 h3{
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+}
+
+.title{
+	position: absolute;
+	top: 42%;
+	left: 8%;
+}
+
+.title h1{
+	border: 5px solid #fff;
+	color: #fff;
+	font-size: 50px;
+}
+
+.button{
+	position: absolute;
+	top: 56%;
+	left: 8%;
+}
+
+.btn
+{
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.btn:hover
+{
+	background-color: #000;
+	color: #fff;
+}
+
+.followus
+{
+    font-size: 16px;
+    color: white;
+    width: 100px;
+}
+.tulisan
+{
+    font-size: 12px;
+}
+.contactus
+{
+    font-size: 15px;
+    color: white;
+    width: 150px;
+}
+
+.drop1 ul 
+{
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    list-style-type:none;
+    z-index: 999;
+}
+.drop1 li:hover { position:relative; background:black; }
+.drop1 li:hover ul 
+{
+    left:0px;
+    top:38px;
+    background:black;
+    padding:0px;
+}
+
+.drop1 li:hover ul li a 
+{
+    padding:5px;
+    display:block;
+    width:200px;
+    text-indent:5px;
+    background-color:black;
+}
+.drop1 li:hover ul li a:hover { background:red; }
+
+
+.responsive{
+	margin-top: 40px;
+	padding: 0 6px;
+	float: left;
+	width: 23%;
+	
+
+}
+
+.gallery {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  
+}
+
+
+
+.overlay1 {
+  position: absolute; 
+  bottom: 5px; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 301px;
+  height: 20px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  margin-left: 39px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+  left: 0%;
+}
+
+.gallery:hover .overlay1 {
+  opacity: 1;
+} 
+
+.posisi{
+	margin-top: 50px;
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<img src="img/tours.png" width="150" height="110">
+			<ul class="drop1">
+				<li><a href="home.html">Home</a></li>
+				<li class="des1"><a href="destination.html">Destinations</a>
+					<ul>
+					    <li><a href='west.html'>Western Indonesia</a></li><br>
+					    <li><a href='central.html'>Central Indonesia</a></li><br>
+					    <li><a href='east.html'>Eastern Indonesia</a></li><br>
+				   </ul> 
+				</li>
+				<li class="active"><a href="galeri.html">Gallery</a><br>
+                  <ul>
+					    <li><a href='mountain.html'>Mountain</a></li><br>
+					    <li><a href='beach.html'>Beach</a></li><br>
+					    <li><a href='park.html'>Park</a></li><br>
+					    <li><a href='sea.html'>Sea</a></li><br>
+				   </ul>
+				</li>
+				<li><a href="reservform.jsp">Reservation</a></li>
+				<li><a href="kontak.jsp">Contact</a></li>
+ 				<li><a href="#"><img src="img/000.png" width="15" height="15"></a>
+                    <ul>
+
+                        <li><a href='Logout'>Logout</a></li><br>
+                   </ul>
+                </li>
+			</ul>
+		</nav>
+
+<div class="posisi">
+	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/pink.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Pink</div>	
+		</div>
+  	</div>
+
+  	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/bay.jpg" width="300" height="200"></a>
+			<div class="overlay1">Tomini Bay</div>
+		</div>
+  	</div>
+
+   <div class="responsive">
+		<div class="gallery">
+			<img src="pantai/sumba.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Nihiwatu</div>
+	</div>
+  </div>
+
+  	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/pandawa.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Pandawa</div>
+		</div>
+  	</div>
+
+  	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/derawan.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Derawan</div>
+		</div>
+  	</div>
+
+  	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/gili.jpg" width="300" height="200"></a>
+			<div class="overlay1">Gili Trawangan, Gili Meno, Gili Air</div>
+		</div>
+  	</div>
+
+
+	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/ora.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Ora</div>
+		</div>
+  	</div>
+
+
+  	<div class="responsive">
+		<div class="gallery">
+			<img src="pantai/sawarna.jpg" width="300" height="200"></a>
+			<div class="overlay1">Pantai Sawarna</div>
+		</div>
+  	</div>
+</div>
+
+<footer>
+    <table>
+        <tr>
+            <td class="followus" >Follow Us :</td>
+            <td ><img src="img/ig.png" width="35" height="35"></td>
+            <td class="tulisan" >@VilleDeTours</td>
+            <td><img src="img/twitter.png" width="35" height="35"><td>
+            <td class="tulisan" >@VilleDeTours</td>
+            <td width="400"></td>
+            <td class="contactus" >Contact Us :</td>
+            <td class="tulisan" >villedetous@vdt.com</td>
+        </tr>
+    </table>
+    </footer>    	
+</body>
+</html>

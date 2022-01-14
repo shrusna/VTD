@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ville de Tours</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('.quickview1').click(function()
+			{
+			var $productview = $(this).parent().parent().next();
+			$($productview).fadeIn('1000');
+			});
+		$('.close-btn').click(function()
+			{
+			var $closebtn = $(this).parent();
+			$($closebtn).fadeOut('800');
+		});
+	});	
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+            font-family: Century Gothic;
+		}
+
+		.main
+		{
+			width: 100%;
+			height: 102.5vh;
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(duda.jpg);
+			background-size: cover;
+		}
+
+		nav
+			{
+				width: 100%;
+				height: 50px;
+				line-height: 40px;
+				z-index: 999;
+			}
+
+			nav ul{
+				float: right;
+				margin-right: 95px;
+			}
+
+			nav ul li{
+				list-style-type: none;
+				display: inline-block;
+				transition: 0.5s all;
+			}
+
+			nav ul li:hover{
+				background-color: #000;	
+			}
+
+			nav ul li.active{
+				background-color: #000;
+		        color: #fff;
+			}
+
+			nav ul li a{
+				text-decoration: none;
+				color: #fff;
+				padding: 30px;
+				font-weight: bold;
+			}
+
+		img
+		{
+			margin-top: 13px;
+            padding-left: 40px;
+		}
+
+		footer 
+		{
+            position: absolute;
+            left: 0;
+            bottom: 0%;
+            height: 52px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            margin-bottom: -15px;
+        }
+
+		.followus
+		{
+		    font-size: 20px;
+		    color: white;
+		    width: 100px;
+		}
+		.tulisan
+		{
+		    font-size: 15px;
+		}
+		.contactus
+		{
+		    font-size: 20px;
+		    color: white;
+		    width: 150px;
+		}
+
+		.drop1 ul 
+			{
+			    position:absolute;
+			    left:-9999px;
+			    top:-9999px;
+			    list-style-type:none;
+			    z-index: 999;
+			}
+			.drop1 li:hover { position:relative; background:black; }
+			.drop1 li:hover ul 
+			{
+			    left:0px;
+			    top:38px;
+			    background:black;
+			    padding:0px;
+			}
+			.drop1 li:hover ul li a 
+			{
+			    padding:5px;
+			    display:block;
+			    width:200px;
+			    text-indent:5px;
+			    background-color:black;
+			}
+			.drop1 li:hover ul li a:hover { background:red; }
+		
+		@font-face 
+				{
+    				font-family: varsity;
+    				src: url(varsity_regular.TTF);
+				}
+
+		.judul h1
+			{
+				position: absolute;
+				top: 22%;
+				left: 0%;
+				font-family: varsity;
+				margin-left: 500px;
+				font-size: 35px;
+			}
+		.indo
+	        {
+	            position: absolute;
+	            top: 35%;
+	            left: 25%;
+	            transform: translate(-50%,-50%);
+	            width: 500px;
+	            height: 200px;
+	            padding: 80px 40px;
+	            box-sizing: border-box;
+	            background: rgba(0,0,0,0);
+	        }
+	    .aceh
+	    	{	
+ 				display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 35.5%;
+	    		left: 15.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn1
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content1
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 225px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content1 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.aceh:hover .dropup-content1 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						    border-radius: 5px;
+						}
+						.aceh:hover .dropbtn1
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .medan
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 41.5%;
+	    		left: 19%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn2
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content2
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 140px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content2 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.medan:hover .dropup-content2 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.medan:hover .dropbtn2
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .padang
+	    	{
+				display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 54%;
+	    		left: 22%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn3
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content3
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 150px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content3 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.padang:hover .dropup-content3
+						{
+							display: block;
+							left:-100px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.padang:hover .dropbtn3
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .riau
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 48%;
+	    		left: 23.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn4
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content4
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content4 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.riau:hover .dropup-content4 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.riau:hover .dropbtn4
+						{
+							background-color: #000;
+							color: #fff;
+						}
+		.kepRiau
+				{
+				display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 50.5%;
+	    		left: 29%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn5
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content5
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 140px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content5 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kepRiau:hover .dropup-content5
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kepRiau:hover .dropbtn5
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .jambi
+	    	{
+				display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 56%;
+	    		left: 25.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn6
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content6
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content6 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.jambi:hover .dropup-content6
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.jambi:hover .dropbtn6
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .bengkulu
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 62%;
+	    		left: 24.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn7
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content7
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content7 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.bengkulu:hover .dropup-content7
+						{
+							display: block;
+							left:-70px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.bengkulu:hover .dropbtn7
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .palembang
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 61.5%;
+	    		left: 28%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn8
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content8
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 155px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content8 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.palembang:hover .dropup-content8
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.palembang:hover .dropbtn8
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kepBangka
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 58%;
+	    		left: 31.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn9
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content9
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 170px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content9 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kepBangka:hover .dropup-content9 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kepBangka:hover .dropbtn9
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .lampung
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 67.5%;
+	    		left: 30%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn10
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content10
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content10 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.lampung:hover .dropup-content10
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.lampung:hover .dropbtn10
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .banten
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 73%;
+	    		left: 31.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn11
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content11
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content11 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.banten:hover .dropup-content11
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.banten:hover .dropbtn11
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .jabar
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 75%;
+	    		left: 35%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn12
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content12
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 100px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content12 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.jabar:hover .dropup-content12
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.jabar:hover .dropbtn12
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .jakarta
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 72%;
+	    		left: 33.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn13
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content13
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 101px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content13 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.jakarta:hover .dropup-content13 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.jakarta:hover .dropbtn13
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .jateng
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 74.5%;
+	    		left: 37%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn14
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content14
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 120px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content14 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.jateng:hover .dropup-content14
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.jateng:hover .dropbtn14
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .yogya
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 77%;
+	    		left: 39%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn15
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content15
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 125px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content15 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.yogya:hover .dropup-content15
+						{
+							display: block;
+							right: 0px;
+						    top:22px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.yogya:hover .dropbtn15
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .jatim
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 76.5%;
+	    		left: 42.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn16
+	    		{
+ 					background-color:#ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content16
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 105px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content16 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.jatim:hover .dropup-content16
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.jatim:hover .dropbtn16
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .bali
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 79%;
+	    		left: 47.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn17
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content17
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content17 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.bali:hover .dropup-content17
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.bali:hover .dropbtn17
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .ntb
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 80%;
+	    		left: 52%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn18
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content18
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 189px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content18 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.ntb:hover .dropup-content18
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.ntb:hover .dropbtn18
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .ntt
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 82%;
+	    		right: 39%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn19
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content19
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 188px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content19 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.ntt:hover .dropup-content19
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.ntt:hover .dropbtn19
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kalut
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 40%;
+	    		left: 50%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn20
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content20
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 155px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content20 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kalut:hover .dropup-content20
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kalut:hover .dropbtn20
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kalbar
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 52%;
+	    		left: 40%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn21
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content21
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 150px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content21 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kalbar:hover .dropup-content21
+						{
+							display: block;
+							left: -100px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kalbar:hover .dropbtn21
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kalteng
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 57%;
+	    		left: 44%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn22
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content22
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 170px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content22 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kalteng:hover .dropup-content22 
+						{
+							display: block;
+							left:-100px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kalteng:hover .dropbtn22
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kalsel
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 62%;
+	    		left: 48%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn23
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content23
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 170px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content23 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kalsel:hover .dropup-content23 
+						{
+							display: block;
+							left:-90px;
+						    top:23px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.aceh:hover .dropbtn23
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .kaltim
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 50%;
+	    		left: 50%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn24
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content24
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 155px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content24 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.kaltim:hover .dropup-content24
+						{
+							display: block;
+							left:-90px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.kaltim:hover .dropbtn24
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .gorontalo
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 48.5%;
+	    		left: 60.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn25
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content25
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content25 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.gorontalo:hover .dropup-content25 
+						{
+							display: block;
+							left:-80px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.gorontalo:hover .dropbtn25
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .sulut
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 48%;
+	    		left: 63.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn26
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content26
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 130px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content26 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.sulut:hover .dropup-content26
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.sulut:hover .dropbtn26
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	   .sulbar
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 59.5%;
+	    		left: 54.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn27
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					border: none;
+					border-radius: 10px;
+				}
+						.dropup-content27
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 125px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content27 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.sulbar:hover .dropup-content27
+						{
+							display: block;
+							left:-100px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.sulbar:hover .dropbtn27
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .sulteng
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 56%;
+	    		left: 58.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn28
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content28
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 145px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content28 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.sulteng:hover .dropup-content28
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.sulteng:hover .dropbtn28
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .sulsel
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 67%;
+	    		left: 56%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn29
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content29
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 145px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content29 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.sulsel:hover .dropup-content29
+						{
+							display: block;
+							left:-80px;
+						    top: 22px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.sulsel:hover .dropbtn29
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .sultengga
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 64%;
+	    		left: 59.5%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn30
+	    		{
+ 					background-color: #ff1c1c;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content30
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 165px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content30 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.sultengga:hover .dropup-content30
+						{
+							display: block;
+							left:0px;
+						    top:22px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.sultengga:hover .dropbtn30
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .malukut
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 48%;
+	    		left: 70%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn31
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content31
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 120px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content31 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.malukut:hover .dropup-content31 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.malukut:hover .dropbtn31
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .maluku
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 61%;
+	    		left: 73%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn32
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content32
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 10px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content32 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.maluku:hover .dropup-content32 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.maluku:hover .dropbtn32
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .papBar
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 55%;
+	    		left: 79%;
+	    		z-index: 4;
+	    	}
+	    		.dropbtn33
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}
+						.dropup-content33
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 110px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content33 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.papBar:hover .dropup-content33 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.papBar:hover .dropbtn33
+						{
+							background-color: #000;
+							color: #fff;
+						}
+	    .papua
+	    	{
+	    		display: inline-block;
+	    		position: absolute;
+	    		width: 7px;
+	    		height: 7px;
+	    		box-sizing: border-box;
+	    		top: 63%;
+	    		left: 85%;
+	    		z-index: 4;
+	    	}
+	    	.dropbtn34
+	    		{
+ 					background-color: #17e401;
+					color: #fff;
+					padding: 4px;
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					font-weight: bold;
+				}			
+	    		
+						.dropup-content34
+						{
+							display: none;
+							position: absolute;
+							top: -12px;
+							min-width: 0px;
+							z-index: 999;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.dropup-content34 p:hover 
+						{
+							background-color: rgb(0,0,0,0.3);
+							font-weight: bold;
+							color: #fff
+						}
+						.papua:hover .dropup-content34 
+						{
+							display: block;
+							left:0px;
+						    top:-12px;
+							background-color: rgb(0,0,0,0.3);
+							color: #fff;
+						    padding:0px;
+						}
+						.papua:hover .dropbtn34
+						{
+							background-color: #000;
+							color: #fff;
+						}
+
+	.product1
+		{
+			width: 300px;
+			height: 200px;
+			margin-top: 50px;
+			margin-left: 40px;
+			display: inline-block;
+			float: left;
+		}
+
+	.quickview1
+		{
+			width: 100px;
+			padding: 5px 0;
+			text-align: center;
+		    background-color: #000;
+		    position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: bold;
+		    color: #fff;
+		    cursor: pointer;
+		    font-size: 15px;
+		}
+
+	.productimg:hover .quickview1
+		{
+		    top: 0;
+		}
+	.product-view
+		{
+			position: absolute;
+			display: none;
+			width: 800px;
+			height: 400px;
+		    padding: 10px;
+		    border: 2px solid #fff;
+		    top: 50%;
+		    left: 50%;
+		    border-radius: 35px;
+		    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+		    transform: translate(-50%, -50%);
+		    -webkit-transform: translate(-50%, -50%);
+		    -moz-transform: translate(-50%, -50%);
+		    background-color: #000;
+		    color: #fff;
+		    z-index: 999;
+		}
+
+	.close-btn
+		{
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 10px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+	.zoom
+		{
+			width: 250px;
+			display: inline-block;
+			float: left;
+			margin-left: -20px;
+			margin-top: 5px;
+		}
+
+	.zoom img
+		{ 
+			width: 250px;
+
+		}
+
+	.desc
+		{
+			margin-right: 20px;
+			margin-top: 10px;
+			float: right;
+		}
+
+	.order
+		{
+			font-weight: bold;
+		}
+
+		.note1
+		{
+			color: #fff;
+		}
+			.note1 .green
+	    		{
+	    			display: inline-block;
+	    			position: absolute;
+	    			width: 7px;
+	    			height: 7px;
+	   		 		box-sizing: border-box;
+	    			top: 75%;
+	    			left: 6%;
+	    			z-index: 999;
+	    		}
+	    			.A5
+	    			{
+ 						background-color: #17e401;
+						color: #ff1c1c;
+						padding: 3px;
+						border-radius: 10px;
+						font-weight: bold;
+					}
+					.avail
+					{
+						position: absolute;
+						font-size: 15px;
+						width: 250px;
+						top: 5px;
+						left: 20px;
+					}
+		.note2
+		{
+			color: #fff;
+		}
+			.note2 .Red
+	    		{
+	    			display: inline-block;
+	    			position: absolute;
+	    			width: 7px;
+	    			height: 7px;
+	   		 		box-sizing: border-box;
+	    			top: 79%;
+	    			left: 6%;
+	    			z-index: 999;
+	    		}
+	    			.A6
+	    			{
+ 						background-color: #ff1c1c;
+						color: #ff1c1c;
+						padding: 3px;
+						border-radius: 10px;
+						font-weight: bold;
+					}
+					.unavail
+					{
+						position: absolute;
+						font-size: 15px;
+						width: 250px;
+						top: 5px;
+						left: 20px;
+					}
+	</style>
+		</head>
+			<body>
+			<div class="judul">
+				<h1>>MAP OF INDONESIA<</h1>
+			</div>
+			<div class="aceh">
+				<button class="dropbtn1"> </button>
+				<div class="dropup-content1">
+					<p>Nangro Aceh Darussalam</p>
+				</div>
+			</div>
+			<div class="medan">
+				<button class="dropbtn2"> </button>
+				<div class="dropup-content2">
+					<p>Sumatera Utara</p>
+				</div>
+			</div>
+			<div class="padang">
+				<button class="dropbtn3"> </button>
+				<div class="dropup-content3">
+					<p class="quickview1">Sumatera Barat</p>
+				</div>
+					<div class="posisi">
+					</div>
+   				</div>
+					    <div class="product-view">
+					        <div class="close-btn">X</div>
+					        <div class="zoom">
+					        	<img src="wes/sianok.jpg">
+					        </div>
+					        <div class="desc">
+					        	<h3>Ngarai Sianok</h3><br>
+					        	<h5><p>is a steep valley in the<br> middle of Bukittinggi City, West Sumatera Province.<br> This long and winding valley is located in<br> the south of the Koto Gadang Gorge</h5><br>
+					        	<h5>Location : Pulai Anak Air, Mandiangin Koto Selayan,<br> Kota Bukittinggi, Sumatera Barat</h5>
+					        	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+					            <div class="travel">
+					                <h5>Airplane : Rp.2.184.783</h5>
+					        		<h5>accommodation : Rp.2.623.272</h5>
+					        		<h5>Entrance Ticket : Rp.25.000</h5>
+					        		<h5>--------------------</h5>
+					        		<h5>TOTAL : Rp.4.833.055</h5>
+					            </div><br>    
+					        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="riau">
+				<button class="dropbtn4"> </button>
+				<div class="dropup-content4">
+					<p>Riau</p>
+				</div>
+			</div>
+
+			<div class="kepRiau">
+				<button class="dropbtn5"> </button>
+				<div class="dropup-content5">
+					<p>Kepulauan Riau</p>
+				</div>
+			</div>
+
+			<div class="jambi">
+				<button class="dropbtn6"> </button>
+				<div class="dropup-content6">
+					<p>Jambi</p>
+				</div>
+			</div>
+
+			<div class="bengkulu">
+				<button class="dropbtn7"> </button>
+				<div class="dropup-content7">
+					<p class="quickview1">Bengkulu</p>
+				</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/fort.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Fort Marlborough</h3><br>
+				        	<h5>If you happen to be in Bengkulu and enjoy historical attractions,<br> try visiting Fort Marlborough Fort, located in Segara Bay,<br> Keling Garden, Bengkulu.</h5><br>
+				        	<h5>Location : Jl. Benteng, Kebun Keling, Tlk. Segara, Kota Bengkulu, Bengkulu</h5>
+				        	<h5>Oprasional Day : Every Day: 08.00 – 18.00 WIB</h5><br>
+				            <div class="travel">
+				                <h5>Airplane : Rp.1.628.409</h5>
+					        	<h5>accommodation : Rp.3.073.651</h5>
+					        	<h5>Entrance Ticket : Rp.15.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.4.717.060</h5>
+				        	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+
+			<div class="palembang">
+				<button class="dropbtn8"> </button>
+				<div class="dropup-content8">
+					<p>Sumatera Selatan</p>
+				</div>
+			</div>
+
+			<div class="kepBangka">
+				<button class="dropbtn9"> </button>
+				<div class="dropup-content9">
+					<p>Kepulauan Bangka</p>
+				</div>
+			</div>
+			<div class="lampung">
+				<button class="dropbtn10"> </button>
+				<div class="dropup-content10">
+					<p class="quickview1">Lampung</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/sumur.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Pantai Sumurtiga</h3><br>
+				        	<h5>This white sand beach has a long coastline with light blue sea water,<br> complete with coconut trees scattered<br> along the shoreline.</h5><br>
+				        	<h5>Location : Sukajaya Lempasing, Padang Cermin, Kab.Pasawaran, Lampung</h5>
+				        	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>  
+				            <div class="travel">
+				                <h5>Airplane : Rp.893.359</h5>
+					        	<h5>accommodation : Rp.4.119.435</h5>
+					        	<h5>Entrance Ticket : Rp.30.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.5.042.824</h5>
+				        	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+			<div class="palembang">
+				<button class="dropbtn8"> </button>
+				<div class="dropup-content8">
+					<p>Sumatera Selatan</p>
+				</div>
+			</div>
+
+			<div class="kepBangka">
+				<button class="dropbtn9"> </button>
+				<div class="dropup-content9">
+					<p>Kepulauan Bangka</p>
+				</div>
+			</div>
+			<div class="banten">
+				<button class="dropbtn11"> </button>
+				<div class="dropup-content11">
+					<p class="quickview1">Banten</p>
+			</div>
+				<div class="posisi">
+				</div>
+    </div>
+    <div class="product-view">
+        <div class="close-btn">X</div>
+        <div class="zoom">
+        	<img src="wes/peucang.jpg">
+        </div>
+        <div class="desc">
+        	<h3>Pantai Peucang Banten</h3><br>
+        	<h5>At the westernmost tip of Java Island itself there is an<br> interesting tourist spot that cannot be missed,<br> namely Peucang Island. In Island is located just<br> east of Ujun Kulon National Park and<br> has a breathtaking view.</h5><br>
+        	<h5>LOCATION : Pandeglang, Banten, sebelah timur Taman Nasional Ujung Kulon</p></h5>
+        	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+            <div class="travel">
+               	<h5>Bus : 500.000</h5>
+				<h5>accommodation : Rp.2.439.000</h5>
+				<h5>Entrance Ticket : Rp.300.000</h5>
+				<h5>--------------------</h5>
+				<h5>TOTAL : Rp.3.239.000</h5>
+        	</div>
+        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+        </div>
+    </div>
+				</div>
+			</div>
+
+			<div class="jabar">
+				<button class="dropbtn12"> </button>
+				<div class="dropup-content12">
+					<p class="quickview1">Jawa Barat</p>
+			</div>
+				<div class="posisi">
+				</div>
+    </div>
+    <div class="product-view">
+        <div class="close-btn">X</div>
+        <div class="zoom">
+        	<img src="wes/tangku.jpg">
+        </div>
+        <div class="desc">
+        	<h3>Tangkuban Perahu</h3><br>
+        	<h5><p>This tourist attraction save a lot of beauty that always manages to<br> make people amazed and always want to visit it.<br> Tangkuban Perahu volcano still belongs to an active volcano.</h5><br>
+        	<h5>LOCATION : Cikahuripan, Lembang, Kabupaten Bandung Barat, Jawa Barat</p></h5>
+        	<h5>Oprasional Day : Every Day: 07.00 – 17.00 WIB</h5><br>
+            <div class="travel">
+                <h5>Bus : Rp.250.000</h5>
+				<h5>accommodation : Rp.8.921.995</h5>
+				<h5>Entrance Ticket : Rp.30.000</h5>
+				<h5>--------------------</h5>
+				<h5>TOTAL : Rp.9.201.995</h5>
+        	</div>
+        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+        </div>
+    </div>
+		</div>
+
+			<div class="jakarta">
+				<button class="dropbtn13"> </button>
+				<div class="dropup-content13">
+					<p>DKI Jakarta</p>
+				</div>
+			</div>
+
+			<div class="jateng">
+				<button class="dropbtn14"> </button>
+				<div class="dropup-content14">
+					<p>Jawa Tengah</p>
+				</div>
+			</div>
+
+			<div class="yogya">
+				<button class="dropbtn15"> </button>
+				<div class="dropup-content15">
+					<p>DI Yogyakarta</p>
+				</div>
+			</div>
+
+			<div class="jatim">
+				<button class="dropbtn16"> </button>
+				<div class="dropup-content16">
+					<p>Jawa Timur</p>
+				</div>
+			</div>
+
+			<div class="bali">
+				<button class="dropbtn17"> </button>
+				<div class="dropup-content17">
+					<p class="quickview1">Bali</p>
+				</div>
+					<div class="posisi">
+					</div>
+    			</div>
+					    <div class="product-view">
+					        <div class="close-btn">X</div>
+					        <div class="zoom">
+					        	<img src="wes/dino.jpg">
+					        </div>
+					        <div class="desc">
+					        	<h3>Kelingking Beach</h3><br>
+	    						<h5>Secluded white sand beach with turquoise blue water,<br> surrounded by headlands & steep cliffs.</h5><br>
+						    	<h5>Location : Bunga Mekar, Nusa Penida, Kabupaten Klungkung, Bali</h5>
+						    	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+					            <div class="travel">
+					           		<h5>Airplane : Rp.2.716.601</h5>
+					        		<h5>accommodation : Rp.5.282.959</h5>
+					        		<h5>Entrance Ticket : Rp.-</h5>
+					        		<h5>--------------------</h5>
+					        		<h5>TOTAL : Rp.7.999.550</h5>
+						    	</div><br>
+					        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ntb">
+				<button class="dropbtn18"> </button>
+				<div class="dropup-content18">
+					<p class="quickview1">Nusa Tenggara Barat</p>
+				</div>
+					<div class="posisi">
+					</div>
+    			</div>
+					    <div class="product-view">
+					        <div class="close-btn">X</div>
+					        <div class="zoom">
+					        	<img src="wes/rinjani.jpg">
+					        </div>
+					        <div class="desc">
+					        	<h3>Gunung Rinjani</h3><br>
+						    	<h5> Every year, there are hundreds of thousands of climbers<br> who struggle to conquer the peak of Rinjani at<br> an altitude of 3,726 meters above sea level,<br> especially before August 17. It is said that Mount Rinjani is a mountain.</h5><br>
+						    	<h5>Location : Lombok</h5>
+						    	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+					            <div class="travel">
+					            	<h5>Airplane : Rp.2.270.593</h5>
+					        		<h5>accommodation : Rp.5.544.000</h5>
+					        		<h5>Entrance Ticket : Rp.50.000</h5>
+					        		<h5>--------------------</h5>
+					      		  	<h5>TOTAL : Rp.7.864.593</h5>
+						    	</div><br>
+					        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ntt">
+				<button class="dropbtn19"> </button>
+				<div class="dropup-content19">
+					<p>Nusa Tenggara Timur</p>
+				</div>
+			</div>
+
+			<div class="kalut">
+				<button class="dropbtn20"> </button>
+				<div class="dropup-content20">
+					<p>Kalimantan Utara</p>
+				</div>
+			</div>
+
+			<div class="kalbar">
+				<button class="dropbtn21"> </button>
+				<div class="dropup-content21">
+					<p>Kalimantan Barat</p>
+				</div>
+			</div>
+
+			<div class="kalteng">
+				<button class="dropbtn22"> </button>
+				<div class="dropup-content22">
+					<p>Kalimantan Tengah</p>
+				</div>
+			</div>
+
+			<div class="kalsel">
+				<button class="dropbtn23"> </button>
+				<div class="dropup-content23">
+					<p>kalimantan Selatan</p>
+				</div>
+			</div>
+
+			<div class="kaltim">
+				<button class="dropbtn24"> </button>
+				<div class="dropup-content24">
+					<p>Kalimantan Timur</p>
+				</div>
+			</div>
+
+			<div class="gorontalo">
+				<button class="dropbtn25"> </button>
+				<div class="dropup-content25">
+					<p>Gorontalo</p>
+				</div>
+			</div>
+
+			<div class="sulut">
+				<button class="dropbtn26"> </button>
+				<div class="dropup-content26">
+					<p class="quickview1">Sulawesi Utara</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/bunaken.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Taman Laut Bunaken</h3><br>
+					    	<h5>Bunaken is an island covering an area of ​​8.08 km² in the Bay of Manado,<br> which is located north of the island of Sulawesi, Indonesia.</h5><br>
+					    	<h5>Location : Liang Beach Bunaken, Wori, Sulawesi Utara</h5>
+					    	<h5>Oprasional Day : Every Day: 07.00 – 18.00 WIT</h5><br>
+				            <div class="travel">
+				                <h5>Airplane : Rp.2.239.000</h5>
+					        	<h5>accommodation : Rp.3.975.544</h5>
+					        	<h5>Entrance Ticket : Rp.100.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.6.314.544</h5>
+					    	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+			<div class="sulbar">
+				<button class="dropbtn27"> </button>
+				<div class="dropup-content27">
+					<p>Sulawesi Barat </p>
+				</div>
+			</div>
+
+			<div class="sulteng">
+				<button class="dropbtn28"> </button>
+				<div class="dropup-content28">
+					<p class="quickview1">Sulawesi Tengah</p>
+				</div>
+					<div class="posisi">
+					</div>
+    			</div>
+					    <div class="product-view">
+					        <div class="close-btn">X</div>
+					        <div class="zoom">
+					        	<img src="wes/tobiiii.jpg">
+					        </div>
+					        <div class="desc">
+					        	<h3>Pulau Wakatobi</h3><br>
+						    	<h5>Wakatobi is one of the districts in Southeast Sulawesi<br>with a stunning natural panorama. Wakatobi itself is an acronym<br> for the names of the major islands<br> there: Wanci, Kaledupa, Tomia, and Binongko.<br> Besides having a landscape with charming white-sand beaches,<br> Wakatobi is also famous as a place where blacksmiths come from.</h5><br>
+						    	<h5>Location : Wangi - wangi, Sulawesi Tenggara</h5><br>
+					            <div class="travel">
+					                <h5>Airplane : Rp.1.732.000</h5>
+					        		<h5>accommodation : Rp.600.000</h5>
+					        		<h5>Entrance Ticket : Rp.1.500.000</h5>
+					        		<h5>--------------------</h5>
+					        		<h5>TOTAL : Rp.4.717.060</h5>
+						    	</div>
+					        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sulsel">
+				<button class="dropbtn29"> </button>
+				<div class="dropup-content29">
+					<p>Sulawesi Selatan</p>
+				</div>
+			</div>
+
+			<div class="sultengga">
+				<button class="dropbtn30"> </button>
+				<div class="dropup-content30">
+					<p>Sulawesi Tenggara</p>
+				</div>
+			</div>
+
+			<div class="malukut">
+				<button class="dropbtn31"> </button>
+				<div class="dropup-content31">
+					<p class="quickview1">Maluku Utara</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/halma.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Halmahera</h3><br>
+					    	<h5>In addition to the Bunaken Marine Park,<br> there is one beautiful spot to see the beauty of marine<br> life and coral reefs in Indonesia,<br> namely in the Halmahera Islands. Its natural beauty which is<br> still maintained until now makes<br> Halmahera the best diving location ever.</h5><br>
+					    	<h5>Location : Maluku Utara</h5>
+					    	<h5>Oprasional Day : Every Day: 24 Hours</h5><br>
+					    	<div class="travel">
+				                <h5>Airplane : Rp.6.198.400</h5>
+					        	<h5>accommodation : Rp.2.100.000</h5>
+					        	<h5>Entrance Ticket : Rp.400.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.8.867.500</h5>
+					    	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+			<div class="maluku">
+				<button class="dropbtn32"> </button>
+				<div class="dropup-content32">
+					<p class="quickview1">Maluku</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/ora.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Pantai Ora</h3><br>
+					    	<h5>This beach has a view that is so exotic.<br> The clearness of sea water and white sand against<br> the backdrop of a sturdy and majestic limestone cane,<br> and the location of a beach covered with lush tropical trees<br> will make the honeymoon atmosphere even more romantic.</h5><br>
+					    	<h5>Location : Jl. Kabupaten, Seram Utara, Kabupaten Maluku Tengah,<br> Maluku, Indonesia</h5>
+					    	<h5>Oprasional Day : Every Day: 07.00 – 18.00 WIT</h5><br>
+				            <div class="travel">
+				            	<h5>Airplane : Rp.2.675.000</h5>
+					        	<h5>accommodation : Rp.1.192.500</h5>
+					        	<h5>Entrance Ticket : Rp.5.000.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.8.867.500</h5>
+					    	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+			<div class="papBar">
+				<button class="dropbtn33"> </button>
+				<div class="dropup-content33">
+					<p class="quickview1">Papua Barat</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="img/rajaampat.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Raja Ampat</h3><br>
+					    	<h5>Raja Ampat Islands in West Papua save extraordinary<br> tourism potential. That said, this tourist attraction<br> is the best underwater diving location in the</h5><br>
+					    	<h5>Location : Papua Barat</h5>
+					    	<h5>Oprasional Day : Every Day: 07.00 – 18.00 WIT</h5><br>
+					    	<div class="travel">
+					    		<h5>Airplane : Rp.3.610.000</h5>
+					        	<h5>accommodation : Rp.5.647.907</h5>
+					        	<h5>Entrance Ticket : Rp.1.000.0000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.10.257.907</h5>
+					    	</div><br>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+			<div class="papua">
+				<button class="dropbtn34"> </button>
+				<div class="dropup-content34">
+					<p class="quickview1">Papua</p>
+			</div>
+				<div class="posisi">
+				</div>
+    		</div>
+				    <div class="product-view">
+				        <div class="close-btn">X</div>
+				        <div class="zoom">
+				        	<img src="wes/sentani.jpg">
+				        </div>
+				        <div class="desc">
+				        	<h3>Danau Sentani</h3><br>
+					    	<h5>Besides Raja Ampat, Papua also has another<br> natural charm that is no less beautiful,<br> namely Lake Sentani. One thing that is so interesting is the<br> presence of 22 islands around the lake.</h5><br>
+					    	<h5>Location : Perbatasan antara Kota Jayapura dan<br> Kabupaten Jayapura, Papua</h5>
+					    	<h5>Oprasional Day : Every Day:24 Hours</h5>
+					    	<div class="travel">
+					    		<h5>Airplane : Rp.3.610.000</h5>
+					        	<h5>accommodation : Rp.450.000</h5>
+					        	<h5>Entrance Ticket : Rp.20.000</h5>
+					        	<h5>--------------------</h5>
+					        	<h5>TOTAL : Rp.4.080.000</h5>
+					    	</div>
+				        	<a href="reservform.jsp"><button class="order">Click to Order</button></a>	
+				        </div>
+				    </div>
+				</div>
+				</div>
+			</div>
+
+			<div class="indo">
+		        <img src="img/indo.png">
+		    </div>
+	<div class="main">
+		<nav>
+			<img src="img/tours.png" width="150" height="110">
+			<ul class="drop1">
+				<li><a href="home.jsp">Home</a></li>
+				<li class="des1"><a href="destination.html">Destinations</a>
+					<ul>
+					    <li><a href='west.html'>Western Indonesia</a></li><br>
+					    <li><a href='central.html'>Central Indonesia</a></li><br>
+					    <li><a href='east.html'>Eastern Indonesia</a></li><br>
+				   </ul> 
+				</li>
+				<li><a href="galeri.html">Gallery</a><br>
+                  <ul>
+					    <li><a href='mountain.html'>Mountain</a></li><br>
+					    <li><a href='beach.html'>Beach</a></li><br>
+					    <li><a href='park.html'>Park</a></li><br>
+					    <li><a href='sea.html'>Sea</a></li><br>
+				   </ul>
+				</li>
+				<li><a href="reservform.jsp">Reservation</a></li>
+				<li><a href="kontak.jsp">Contact</a></li>
+                <li><a href="#"><img src="img/000.png" width="15" height="15"></a>
+                    <ul>
+                        <li><a href='Logout'>Logout</a></li><br>
+                   </ul>
+                </li>				
+			</ul>
+		</nav>
+	</div>	
+		<div class="note1">
+			<div class="green">
+				<button class="A5"></button>
+				<p class="avail">Available Destination</p>
+			</div>
+		</div>	
+		<div class="note2">
+			<div class="Red">
+				<button class="A6"></button>
+				<p class="unavail">Unavailable Destination</p>
+			</div>
+		</div>		
+		<footer>
+		    <table>
+		        <tr>
+		            <td class="followus" >Follow Us :</td>
+		            <td ><img src="img/ig.png" width="35" height="35"></td>
+		            <td class="tulisan" >@VillaDeToure</td>
+		            <td><img src="img/twitter.png" width="35" height="35"><td>
+		            <td class="tulisan" >@VillaDeToure</td>
+		            <td width="400"></td>
+		            <td class="contactus" >Contact Us :</td>
+		            <td class="tulisan" >villadetour@vdt.com</td>
+		        </tr>
+		    </table>
+		    </footer>	 
+		</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="RGraph.common.core.js"></script>
+	<script type="text/javascript" src="RGraph.bar.js"></script>
+	<title>Ville de Tours</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+            font-family: Century Gothic;
+		}
+
+		.main{
+			width: 100%;
+			height: 110vh;
+			background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(img/bgutama.jpg);
+			background-size: cover;
+		}
+
+		nav{
+			width: 100%;
+			height: 50px;
+			line-height: 40px;
+			z-index: 999;
+		}
+
+		nav img{
+			margin-top: -15px;
+		}
+
+		nav ul{
+			float: right;
+			margin-right: 95px;
+		}
+
+		nav ul li{
+			list-style-type: none;
+			display: inline-block;
+			transition: 0.5s all;
+		}
+
+		nav ul li:hover{
+			background-color: #000;	
+		}
+
+		nav ul li.active{
+			background-color: #000;
+	        color: #fff;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: #fff;
+			padding: 30px;
+			font-weight: bold;
+		}
+
+		img{
+			margin-top: 13px;
+            padding-left: 40px;
+		}
+
+		footer {
+            position: fixed;
+            padding-top: -5px;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+       }
+.followus
+{
+    font-size: 16px;
+    color: white;
+    width: 100px;
+}
+.tulisan
+{
+    font-size: 12px;
+}
+.contactus
+{
+    font-size: 15px;
+    color: white;
+    width: 150px;
+}  
+
+.drop1 ul 
+{
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    list-style-type:none;
+    z-index: 999;
+}
+.drop1 li:hover { position:relative; background:black; }
+.drop1 li:hover ul 
+{
+    left:0px;
+    top:38px;
+    background:black;
+    padding:0px;
+}
+
+.drop1 li:hover ul li a 
+{
+    padding:5px;
+    display:block;
+    width:200px;
+    text-indent:5px;
+    background-color:black;
+}
+.drop1 li:hover ul li a:hover { background:red; }
+
+.grap{
+	color: #fff;
+	padding-top: 30px;
+}
+
+.canvas{
+	padding: 30px;
+	color: #000;
+	margin: 50px;
+	background-color: #fff;
+}
+
+.isi{
+
+}
+
+
+     </style>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<a href="home.jsp"></a><img src="img/tours.png" width="150" height="110">
+			<ul class="drop1">
+				<li class="active"><a href="home.jsp">Home</a></li>
+				<li class="des1"><a href="destination.html">Destinations</a>
+					<ul>
+					    <li><a href='west.html'>Western Indonesia</a></li><br>
+					    <li><a href='central.html'>Central Indonesia</a></li><br>
+					    <li><a href='east.html'>Eastern Indonesia</a></li><br>
+				   </ul> 
+				</li>
+				<li><a href="galeri.html">Gallery</a><br>
+                   <ul>
+					    <li><a href='mountain.html'>Mountain</a></li><br>
+					    <li><a href='beach.html'>Beach</a></li><br>
+					    <li><a href='park.html'>Park</a></li><br>
+					    <li><a href='sea.html'>Sea</a></li><br>
+				   </ul>
+				</li>
+				<li><a href="reservform.jsp">Resvation</a></li>
+				<li><a href="kontak.jsp">Contact</a></li>
+                <li><a href="admin.jsp"><img src="img/000.png" width="15" height="15"></a>
+                    <ul>
+                        <li><a href='#'>Info</a></li><br>
+                        <li><a href='Logout'>Logout</a></li><br>
+                   </ul>
+                </li>				
+			</ul>
+		</nav>
+
+<div class="grap">		
+		<H2><marquee scrollamount="10" bgcolor="#000">Don't forget to have a vacation</marquee></H2>
+			<div class="canvas">	
+				   <div class="isi">
+				   		<h4><p> Established in 2019, Villa De Toure is Indonesia leading<br>individual holiday and special interest travel operator.<br> From the kuta beaches in the Bali to romantic Moyo Island,<br> from exotic and historical Sumba to cosmopolitan and natural Raja Ampat,<br> Villa De Tour connects you to beautiful<br> destinations around the world with the best itineraries, packages and travel deals.</p></h4><br>
+				   		<h4><p> Our special interest tour packages will support your traveling group for sport events, cruise holiday, self-drive trip or even for your romantic honeymoon escape with your loved one.</p></h4>
+				   </div>
+				   <div class="videoread">
+				   	<video width="320" height="240" autoplay>
+					  <source src="videoplayback.mp4" type="video/mp4">
+					  <source src="videoplayback.ogg" type="video/ogg">
+					</video>
+				   </div>
+			</div>			
+	</div>
+<footer>
+    <table>
+        <tr>
+            <td class="followus" >Follow Us :</td>
+            <td ><img src="img/ig.png" width="35" height="35"></td>
+            <td class="tulisan" >@VillaDeToure</td>
+            <td><img src="img/twitter.png" width="35" height="35"><td>
+            <td class="tulisan" >@VillaDeToure</td>
+            <td width="400"></td>
+            <td class="contactus" >Contact Us :</td>
+            <td class="tulisan" >villadetour@vdt.com</td>
+        </tr>
+    </table>
+</footer>	 	
+</body>
+</html>
